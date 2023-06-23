@@ -1,25 +1,80 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
 
-function App() {
+export default function App() {
+  const [showHome, setShowHome] = React.useState(true);
+
+  function handleClick() {
+    setShowHome((home) => !home);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div
+      style={{
+        backgroundColor: "cyan",
+        height: "100vh",
+        margin: -8,
+        display: "flex",
+      }}
+    >
+      <SideBar handleClick={handleClick} />
+      {showHome ? <MainContent /> : <ContactInfo />}
     </div>
   );
 }
 
-export default App;
+function SideBar(props) {
+  return (
+    <div
+      style={{
+        backgroundColor: "green",
+        width: "250px",
+        padding: "20px",
+      }}
+    >
+      <SideComponents name="Home" clicked={props.handleClick} />
+      <SideComponents name="Contact" clicked={props.handleClick} />
+      <SideComponents name="Information" clicked={props.handleClick} />
+      <SideComponents name="Guide" clicked={props.handleClick} />
+    </div>
+  );
+}
+
+function SideComponents(props) {
+  return (
+    <div
+      style={{
+        border: "1px black solid",
+        padding: "8px",
+        marginBottom: "6px",
+        fontWeight: "600",
+      }}
+      onClick={props.clicked}
+    >
+      {props.name}
+    </div>
+  );
+}
+
+function MainContent() {
+  return (
+    <div
+      style={{
+        padding: "28px",
+      }}
+    >
+      This is the main content
+    </div>
+  );
+}
+
+function ContactInfo() {
+  return (
+    <div
+      style={{
+        padding: "28px",
+      }}
+    >
+      This is contact info
+    </div>
+  );
+}
