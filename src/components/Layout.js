@@ -5,7 +5,7 @@ export function Layout({ children, handleClick }) {
         backgroundColor: "#C8E9A0",
         height: "100%",
         margin: -8,
-        minHeight: "calc(100vh - 60px)",
+        minHeight: "calc(100vh - 60px - 60px)",
         paddingBottom: "60px",
       }}
     >
@@ -64,7 +64,7 @@ function SideBar(props) {
         width: "12%",
         padding: "20px",
         minWidth: "120px",
-        minHeight: "calc(100vh - 60px)",
+        minHeight: "calc(100vh - 60px - 60px)",
         paddingTop: "30px",
       }}
     >
