@@ -6,6 +6,7 @@ export function Layout({ children, handleClick }) {
         height: "100%",
         margin: -8,
         minHeight: "calc(100vh - 60px)",
+        paddingBottom: "60px",
       }}
     >
       <div
