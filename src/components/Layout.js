@@ -64,7 +64,7 @@ function SideBar(props) {
         width: "12%",
         padding: "20px",
         minWidth: "120px",
-        minHeight: "calc(100vh - 60px - 60px)",
+        minHeight: "calc(100vh - 60px - 50px)",
         paddingTop: "30px",
       }}
     >
