@@ -12,7 +12,7 @@ export function ContactInfo() {
         style={{
           display: "flex",
           flexWrap: "wrap",
-          justifyContent: "center",
+          justifyContent: "space-between",
           gap: "24px",
           marginTop: "30px",
         }}
@@ -34,7 +34,7 @@ function Contacts() {
   return (
     <div
       style={{
-        border: "1px #A9C3B6 solid",
+        border: "1px #FF6F59 solid",
         padding: "20px",
         borderRadius: "10px",
       }}

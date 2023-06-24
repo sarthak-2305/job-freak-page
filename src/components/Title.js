@@ -11,7 +11,7 @@ export function TitlePart(props) {
       {props.name}
       <div
         style={{
-          border: "1px grey solid",
+          border: "1px #A13D63 solid",
           margin: "8px -28px",
         }}
       ></div>

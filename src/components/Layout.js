@@ -2,16 +2,15 @@ export function Layout({ children, handleClick }) {
   return (
     <div
       style={{
-        backgroundColor: "#c9e7f2",
-        height: "100vh",
+        backgroundColor: "#C8E9A0",
+        height: "100%",
         margin: -8,
-        display: "flex",
+        minHeight: "calc(100vh - 60px)",
       }}
     >
       <div
         style={{
           display: "flex",
-          width: "100%",
         }}
       >
         <SideBar handleClick={handleClick} />
@@ -34,7 +33,7 @@ function BottomBar() {
   return (
     <div
       style={{
-        backgroundColor: "#99ffe0",
+        backgroundColor: "#E7BBE3",
         width: "100%",
         padding: "20px",
         display: "flex",
@@ -60,10 +59,11 @@ function SideBar(props) {
   return (
     <div
       style={{
-        backgroundColor: "#c4c8ff",
-        width: "200px",
+        backgroundColor: "#23C9FF",
+        width: "12%",
         padding: "20px",
-        minWidth: "200px",
+        minWidth: "120px",
+        minHeight: "calc(100vh - 60px)",
         paddingTop: "30px",
       }}
     >
